@@ -1,0 +1,1 @@
+# glorysoft_mobile_plugin
