@@ -19,7 +19,7 @@ class DateFormats {
   static String zh_h_m = 'HH时mm分';
 }
 
-/// month->days.
+/// month->days..
 Map<int, int> MONTH_DAY = {
   1: 31,
   2: 28,
