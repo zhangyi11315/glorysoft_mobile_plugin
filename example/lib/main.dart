@@ -2,7 +2,10 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:flutter/services.dart';
+import 'package:get/get.dart';
 import 'package:glorysoft_mobile_plugin/glorysoft_mobile_plugin.dart';
+import 'package:glorysoft_mobile_plugin/tool/global/global_method.dart';
+import 'package:glorysoft_mobile_plugin/tool/utils/dialog_util.dart';
 
 void main() {
   runApp(const MyApp());
@@ -48,13 +51,21 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       home: Scaffold(
         appBar: AppBar(
           title: const Text('Plugin example app'),
         ),
         body: Center(
-          child: Text('Running on: $_platformVersion\n'),
+          child: Column(
+            children: [
+              Text('Running on: $_platformVersion\n'),
+              ElevatedButton(onPressed: (){
+                print(isHttpFailingModusOrDialog);
+                isHttpFailingModusOrDialog = !isHttpFailingModusOrDialog;
+              }, child: const Text('测试'))
+            ],
+          ),
         ),
       ),
     );

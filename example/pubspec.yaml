@@ -18,6 +18,8 @@ dependencies:
   flutter:
     sdk: flutter
 
+  get: ^4.3.8
+
   glorysoft_mobile_plugin:
     # When depending on this package from a real application you should use:
     #   glorysoft_mobile_plugin: ^x.y.z
