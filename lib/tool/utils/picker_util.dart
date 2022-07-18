@@ -24,6 +24,12 @@ class PickerUtil {
     return pickedFile;
   }
 
+  static Future<XFile?> takeVido() async {
+    final picker = ImagePicker();
+    var pickedFile = await picker.pickVideo(source: ImageSource.camera);
+    return pickedFile;
+  }
+
   static Future<XFile?> selectVido() async {
     final picker = ImagePicker();
     var pickedFile = await picker.pickVideo(source: ImageSource.gallery);
